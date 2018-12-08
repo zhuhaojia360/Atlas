@@ -1,0 +1,17 @@
+<view class='containner'>
+  <view class='activities'>
+    <block wx:for="{{items}}" wx:key="i">
+      <view class='activity' data-id='{{item.objectId}}'>
+        <block class='nav'>
+          <image class='useravatar' src="{{item.avatarUrl}}" mode="cover"></image>
+        </block>
+        <text class='service'>称呼：{{item.name}}</text>
+        <text class='service'>住址：{{item.district}} · {{item.village}}</text>
+        <text class='service'>技能：{{item.skills}}</text>
+        <text class='service'>专业：{{item.tools}}</text>
+        <text class='service'>备注：{{item.remark}}</text>
+      </view>
+    </block>
+  </view>
+  <button class="submitButton" formType="submit" style='margin-top:30rpx;' bindtap='onBookingAyi'>立即预约</button>
+</view>

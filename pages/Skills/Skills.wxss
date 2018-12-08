@@ -1,0 +1,375 @@
+
+.page{
+  height: 100%;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  background:  #efefef;
+}
+
+.nav{
+  position: relative;
+  z-index: 98;
+  height: 78rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.nav-son{
+  color: #B8B8B8;
+  z-index: 99;
+  height: 60rpx;
+  width: 20%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 12pt;
+}
+
+.active{
+  color: #4C4C4C;
+}
+
+.phase{
+  display: inline-block;
+  font-size:35rpx;
+}
+
+.line{
+  width:30rpx;
+  height: 30rpx;
+  margin: 0rpx 15rpx;
+}
+
+.auth{
+  margin-top: 8rpx;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  background-color: #fff;
+  height: 350rpx;
+}
+
+.tips, .notes{
+  height: 60rpx;
+  width: 100%;
+  padding: 40rpx 0rpx;
+  display: flex;
+  font-size: 12pt;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  text-align: center;
+  width: 320rpx;
+  height: 80rpx;
+  margin: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 36rpx;
+  background-color: #333333;
+}
+
+.task{
+  margin-bottom: 100rpx;
+}
+
+.activity{
+  margin: 16rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 0px;
+}
+
+.item-static{
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  margin: 10rpx;
+}
+
+.order-left{
+  width: 20%rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fff;
+  margin: 10rpx;
+}
+
+.order-right{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 10rpx;
+}
+
+.tags{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  float: left;
+  flex-wrap: wrap;
+}
+
+.tag{
+  width: 110rpx;
+  height: 50rpx;
+  margin: 8rpx 8rpx;
+  border: 1rpx solid #efefef;
+  font-size: 9pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bidding{
+  display: flex;
+  flex-direction: column;
+}
+
+.bid-price, .bid-count{
+  display: flex;
+  flex-direction: row;
+}
+
+.flag{
+  font-size: 15pt;
+}
+
+.num{
+  font-size: 9pt;
+}
+
+.type, .time, .village, .duration, .status, .remaining, .address{
+  font-size: 9pt;
+}
+
+.address{
+  color: red;
+}
+
+.content{
+  margin: 8rpx 8rpx;
+  font-size: 9pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+.onPaying, .onVisiting, .onProcessing, .onMarking, .onCancel{
+  color:#fff;
+  font-size: 9pt;
+  font-weight: bold;
+  padding: 5rpx 10rpx;
+  border-radius: 20rpx;
+  margin: 20rpx 0rpx 0rpx 0rpx;
+}
+
+.onPaying{
+  background-color: blue;
+}
+
+.onVisiting{
+  background-color: yellow;
+}
+
+.onProcessing{
+  background-color: green;
+}
+
+.onMarking{
+  background-color: gray;
+}
+
+.onCancel{
+  background-color: red;
+}
+
+
+.item-line{
+  position: relative;
+  margin: 0rpx 16rpx 0rpx 16rpx;
+  border-top: 4rpx dashed #efefef;
+}
+
+.item-line view{
+  width: 28rpx;
+  height: 28rpx;
+  background: #efefef;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 98;
+  top:-14rpx;
+}
+
+.item-line :first-child{
+  left: -28rpx;
+}
+
+.item-line :last-child{
+  right: -28rpx;
+}
+
+.stamp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9pt;
+  font-weight: bold;
+  color: #fff;
+  background-color: #bfbfbf;
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  z-index: 99;
+}
+
+.item-ayi{
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  margin: 10rpx;
+}
+
+.item-action{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin: 0rpx 10rpx 10rpx 10rpx;
+}
+
+.item-left{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+}
+
+.avatar{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.nickname{
+  width:120rpx;
+  height: 50rpx;
+  font-size: 10pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-right{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10rpx;
+}
+
+.item-dynamic{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10rpx;
+}
+
+.detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14rpx;
+}
+
+.age, .sex, .origin, .realname, .distance, .skills, .totaltimes, .remarktimes, .score{
+  font-size: 9pt;
+}
+
+.save, .contact, .receipt, .remark, .booking, .cancel, .taking{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9pt;
+  color: #fff;
+  width: 160rpx;
+  height: 80rpx;
+  background-color: #333333;
+}
+
+.taking{
+  width: 100%;
+}
+
+.personal{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  margin: 0rpx 0rpx 0rpx 10rpx;
+  position: fixed;
+  right: 0;
+  bottom: 180rpx;
+  width: 180rpx;
+  font-size: 11pt;
+  background-color: orange;
+  border-radius: 20rpx 0rpx 0rpx 20rpx;
+}
+
+.personal-btn{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  color: #fff;
+  margin: 2rpx 2rpx 2rpx 2rpx;
+  border-radius: 20rpx 0rpx 0rpx 20rpx;
+}
+
+.refresh{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  margin: 10rpx 0rpx 0rpx 0rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.refresh-btn{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #333333;
+  margin: 2rpx 2rpx 2rpx 2rpx;
+  border: 1rpx solid #efefef;
+}

@@ -1,0 +1,65 @@
+<view class='page'>
+  <view class='input'>
+      <view class='input-tag'>联系人</view>
+      <view class='input-value'>
+        <input type="number" bindblur="inputTelephoneRight" placeholder='{{tipsCust}}' name="area" placeholder-style="color:#B8B8B8" />
+      </view>
+      <image class="rightArrow" wx:if="{{inputTelephone==true}}" src="../../releaseIcon/inputRight.png"></image>
+      <image class="rightArrow" wx:elif="{{inputTelephone==false}}" src="../../releaseIcon/inputError.png"></image>
+      <!--view class='input-unit'>平方米</view-->
+    </view>
+
+    <view class='input'>
+      <view class='input-tag'>手机号码</view>
+      <view class='input-value'>
+        <input type="number" bindblur="inputTelephoneRight" placeholder='{{tipsPhone}}' name="area" placeholder-style="color:#B8B8B8" />
+      </view>
+      <image class="rightArrow" wx:if="{{inputTelephone==true}}" src="../../releaseIcon/inputRight.png"></image>
+      <image class="rightArrow" wx:elif="{{inputTelephone==false}}" src="../../releaseIcon/inputError.png"></image>
+      <!--view class='input-unit'>平方米</view-->
+    </view>
+
+    <view class='input'>
+      <view class='input-tag'>省/市/区</view>
+      <view class='input-value'>
+        <picker bindchange="regionChange" mode='region' name='region' value="{{region}}" custom-item='{{customItem}}'>
+          <view class="picker">
+            <text class="grey">{{region[0]}},{{region[1]}},{{region[2]}}</text>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class='input'>
+      <view class='input-tag'>所在小区</view>
+      <view class='input-value'>
+        <input bindblur="inputVillageRight" placeholder='{{tipsVillage}}' name="village" placeholder-style="color:#B8B8B8" />
+      </view>
+      <image class="rightArrow" wx:if="{{inputVillage==true}}" src="../../releaseIcon/inputRight.png"></image>
+      <image class="rightArrow" wx:elif="{{inputVillage==false}}" src="../../releaseIcon/inputError.png"></image>
+    </view>
+
+    <view class='input'>
+      <view class='input-tag'>详细地址</view>
+      <view class='input-value'>
+        <input bindblur="inputAddressRight" placeholder='{{tipsAddress}}' name="address" placeholder-style="color:#B8B8B8" />
+      </view>
+      <image class="rightArrow" wx:if="{{inputAddress==true}}" src="../../releaseIcon/inputRight.png"></image>
+      <image class="rightArrow" wx:elif="{{inputAddress==false}}" src="../../releaseIcon/inputError.png"></image>
+    </view>
+
+    <view class='input-detail'>
+      <view class='input-tag'>标签</view>
+      <view class='input-value'>
+        <view class="othersItem" wx:for="{{traitList}}" wx:key='' data-index="{{index}}" bindtap="chooseThingsTrait" style="{{item.choose=='true'?'background-color:#4C4C4C;border: 1rpx solid #4C4C4C;color:#fff':' background-color: #fff;  border: 1rpx solid #c6c4c4;' }}">
+          <view style="padding:15rpx;">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+
+    <button class="submitButton" formType="submit" style='margin-top:30rpx;background-color: #B8B8B8;' bindtap='addAddress'>删除</button>
+
+    <button class="submitButton" formType="submit" style='margin-top:30rpx;background-color: #333333;' bindtap='addAddress'>新增地址</button>
+
+
+</view>

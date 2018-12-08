@@ -1,0 +1,141 @@
+<view class='page'>
+  <view class='nav'>
+    <view class="nav-son {{shownavindex == 1 ? 'active' : ''}}" bindtap='' data-nav='1'>
+      <view class='phase'>{{onPaying}}</view>
+      <!--image class='line' src='../../images/line.png'></image-->
+    </view>
+    <view class="nav-son {{shownavindex == 2 ? 'active' : ''}}" bindtap='' data-nav='2'>
+      <view class='phase'>{{onVisiting}}</view>
+      <!--image class='line' src='../../images/line.png'></image-->
+    </view>
+    <view class="nav-son {{shownavindex == 3 ? 'active' : ''}}" bindtap='' data-nav='3'>
+      <view class='phase'>{{onProcessing}}</view>
+      <!--image class='line' src='../../images/line.png'></image-->
+    </view>
+    <view class="nav-son {{shownavindex == 4 ? 'active' : ''}}" bindtap='' data-nav='4'>
+      <view class='phase'>{{onMarking}}</view>
+      <!--image class='line' src='../../images/line.png'></image-->
+    </view>
+    <view class="nav-son {{shownavindex == 5 ? 'active' : ''}}" bindtap='' data-nav='5'>
+      <view class='phase'>{{onAll}}</view>
+      <!--image class='line' src='../../images/line.png'></image-->
+    </view>
+  </view>
+
+  <view class='auth' wx:if='{{!isAuth && !isLogin}}'>
+    <view class='tips'>{{tips}}</view>
+    <view class='button' bindtap='onAuth'>登录或注册</view>
+  </view>
+  <view wx:elif="{{isAuth && isLogin && userInfo}}">
+    <!--block wx:for="{{items}}" wx:key="i" wx:if="{{items}}"-->
+    <block>
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <view class='item-order'>
+          <view class='item-left'>
+            <view class='stamp'>日常保洁</view>
+          </view>
+          <view class='item-right'>
+            <view class='detail'>
+              <text class='time'>开工：2018-10-13 10:00</text>
+              <text class='onProcessing'>进行中</text>
+            </view>
+            <view class='detail'>
+              <text class='village'>小区：岳麓区金茂府</text>
+              <text class='duration'>预计时长：6小时</text>
+            </view>
+          </view>
+        </view>
+        <view class='item-line'>
+          <view></view>
+          <view></view>
+        </view>
+        <view class='item-ayi'>
+          <view class='item-left'>
+            <image class='avatar' src='../../images/pic.png'></image>
+            <text class='nickname'>陈尔尔</text>
+          </view>
+          <view class='item-right'>
+            <view class='detail'>
+              <text class='age'>年龄：45岁</text>
+              <text class='sex'>性别：女</text>
+              <text class='origin'>籍贯：湖南宁乡</text>
+            </view>
+            <view class='detail'>
+              <text class='realname'>实名：430105****1234</text>
+              <text class='distance'>距离：3KM</text>
+            </view>
+            <view class='detail'>
+              <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
+            </view>
+          </view>
+        </view>
+        <view class='item-action'>
+          <view class='save'>收藏技师</view>
+          <view class='contact'>联系客服</view>
+          <view class='receipt'>查看发票</view>
+          <view class='remark'>评价晒单</view>
+          <!--view class='booking'>再次预约</view>
+          <view class='cancel'>取消预约</view-->
+        </view>
+      </view>
+    </block>
+
+    <block>
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <view class='item-order'>
+          <view class='item-left'>
+            <view class='stamp'>日常保洁</view>
+          </view>
+          <view class='item-right'>
+            <view class='detail'>
+              <text class='time'>开工：2018-10-13 10:00</text>
+              <text class='onPaying'>待支付</text>
+            </view>
+            <view class='detail'>
+              <text class='village'>小区：岳麓区金茂府</text>
+              <text class='duration'>预计时长：6小时</text>
+            </view>
+          </view>
+        </view>
+        <view class='item-line'>
+          <view></view>
+          <view></view>
+        </view>
+        <view class='item-ayi'>
+          <view class='item-left'>
+            <image class='avatar' src='../../images/pic.png'></image>
+            <text class='nickname'>陈尔尔</text>
+          </view>
+          <view class='item-right'>
+            <view class='detail'>
+              <text class='age'>年龄：45岁</text>
+              <text class='sex'>性别：女</text>
+              <text class='origin'>籍贯：湖南宁乡</text>
+            </view>
+            <view class='detail'>
+              <text class='realname'>实名：430105****1234</text>
+              <text class='distance'>距离：3KM</text>
+            </view>
+            <view class='detail'>
+              <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
+            </view>
+          </view>
+        </view>
+        <view class='item-action'>
+          <view class='save'>收藏技师</view>
+          <view class='contact'>联系客服</view>
+          <view class='receipt'>查看发票</view>
+          <view class='remark'>评价晒单</view>
+          <!--view class='booking'>再次预约</view>
+          <view class='cancel'>取消预约</view-->
+        </view>
+      </view>
+    </block>
+
+    <!--block wx:if="{{!items}}"-->
+    <!--block>
+        <view class='notes'>{{notes}}</view>
+      </block-->
+  </view>
+
+</view>

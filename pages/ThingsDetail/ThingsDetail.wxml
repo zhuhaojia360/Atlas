@@ -1,0 +1,192 @@
+<view class='page'>
+
+  <!--  选择区域  -->
+  <!--view class="temp temp2 {{serviceOpen?'slidown':'slidup'}} {{serviceShow? 'disappear':''}}">
+    <view data-service='{{item}}' hover-class='navigator-hover' wx:for="{{content}}" wx:key="{{item.id}}" bindtap='selectService' style='padding-left:10px'>{{item}}</view>
+  </view-->
+
+  <!--  排序方法  -->
+  <!--view class="temp temp2 {{sortOpen?'slidown':'slidup'}} {{sortShow? 'disappear':''}}">
+    <view data-service='{{item}}' hover-class='navigator-hover' wx:for="{{content}}" wx:key="{{item.id}}" bindtap='selectService' style='padding-left:10px'>{{item}}</view>
+  </view-->
+
+  <!-- 筛选条件 -->
+  <!--view class="temp temp2 {{filterOpen?'slidown':'slidup'}} {{filterShow? 'disappear':''}}">
+    <view data-filter='{{item}}' hover-class='navigator-hover' wx:for="{{content}}" wx:key="{{item.id}}" bindtap='selectFilter' style='padding-left:10px'>{{item}}</view>
+  </view-->
+
+  <!-- 背景变灰 -->
+  <!--view class="fullbg {{isfull?'fullopacity':''}}" bindtap='hidebg'></view-->
+
+  <view class='address'>
+    <text class='addr-txt'>位置</text>
+    <view class='addr-value'>梅溪湖国际新城·金茂府一期·8栋888</view>
+    <image class='addr-link' src='../../images/17.png'></image>
+  </view>
+  
+  <map class='map' id="map4select" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" scale="14" bindregionchange="regionchange" controls="{{controls}}">
+  </map>
+
+  <!--view class='nav'>
+    <view class='star'>推荐：★★★★☆</view>
+    <image class='complain' src='../../images/warn.png'></image>
+  </view-->
+
+  <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
+    <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+      <view class='item-ayi'>
+        <view class='item-left'>
+          <image class='avatar' src='../../images/pic.png'></image>
+          <text class='nickname'>陈尔尔</text>
+        </view>
+        <view class='item-right'>
+          <view class='detail'>
+            <text class='age'>年龄：45岁</text>
+            <text class='sex'>性别：女</text>
+            <text class='origin'>籍贯：湖南宁乡</text>
+          </view>
+          <view class='detail'>
+            <text class='realname'>实名：430105****1234</text>
+            <!--text class='distance'>距离：3KM</text-->
+          </view>
+          <view class='item-skills'>
+            <text class='skills'>擅长：</text>
+            <text class='skills'>日常保洁</text>
+            <text class='skills'>新房开荒</text>
+            <text class='skills'>擦玻璃</text>
+          </view>
+        </view>
+      </view>
+      <!--view class='detail'>
+        <text class='auth'>健康证</text>
+        <text class='auth'>月嫂证</text>
+        <text class='auth'>上岗证</text>
+        <text class='auth'>意外保险</text>
+      </view-->
+    </view>
+
+  </block>
+ 
+  <view class='summary'>
+    <view class='gather'>
+      <view class='times'>评价(230)</view>
+      <view class='score'>好评度99%</view>
+      <!--view class='ayistar'>★★★★☆</view-->
+    </view>
+    <view class='tags'>
+      <view class='tag'>少说多做50</view>
+      <view class='tag'>态度好30</view>
+      <view class='tag'>工具齐20</view>
+      <view class='tag'>准时达19</view>
+      <view class='tag'>经验丰富18</view>
+      <view class='tag'>随叫随到14</view>
+      <view class='tag'>证件齐12</view>
+    </view>
+  </view>
+
+  <!--block wx:for="{{remarks}}" wx:key="i" wx:if="{{!remarks}}"-->
+  <view class='remarks' bindtap='onDetail' data-id='{{remarks.objectId}}'>
+    <view class='customer'>
+      <view class='cust-left'>
+        <image class='pic' src='../../images/pic.png'></image>
+        <view class='name'>铁**沫</view>
+        <view class='grade'>钻石PLUS</view>
+      </view>
+      <view class='cust-right'>
+        <view class='points'>★★★★★</view>
+      </view>
+    </view>
+    <view class='content'>阿姨非常准时，话不多，做事麻利，工具齐全，证件齐全，经过岗前培训。走之前还记得关水龙头、电闸等，还会发短信通知我们。</view>
+    <!--view wx:for="{{pictures}}" wx:key='i' wx:if="{{!pictures}}"-->
+    <view class='photo'>
+      <!--image class='pictures' src='{{pictures.url}}'></image-->
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+    </view>
+
+    <view class='item-line'>
+      <view></view>
+      <view></view>
+    </view>
+
+    <view class='customer'>
+      <view class='cust-left'>
+        <image class='pic' src='../../images/pic.png'></image>
+        <view class='name'>麻**花</view>
+        <view class='grade'>青铜PLUS</view>
+      </view>
+      <view class='cust-right'>
+        <view class='points'>★★★★☆</view>
+      </view>
+    </view>
+    <view class='content'>阿姨人很好，态度很好，做事麻利，给10086个赞</view>
+    <!--view wx:for="{{pictures}}" wx:key='i' wx:if="{{!pictures}}"-->
+    <view class='photo'>
+      <!--image class='pictures' src='{{pictures.url}}'></image-->
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+    </view>
+
+    <view class='item-line'>
+      <view></view>
+      <view></view>
+    </view>
+
+    <view class='customer'>
+      <view class='cust-left'>
+        <image class='pic' src='../../images/pic.png'></image>
+        <view class='name'>毛**线</view>
+        <view class='grade'>铂金PLUS</view>
+      </view>
+      <view class='cust-right'>
+        <view class='points'>★★★★☆</view>
+      </view>
+    </view>
+    <view class='content'>阿姨一过来就热情打招呼，准时，态度非常好，工具齐全，操作熟练，话不多，药剂也带了，真的非常好。这个阿姨必须给五星好评啊</view>
+    <view class='photo'>
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+    </view>
+
+    <view class='item-line'>
+      <view></view>
+      <view></view>
+    </view>
+
+    <view class='customer'>
+      <view class='cust-left'>
+        <image class='pic' src='../../images/pic.png'></image>
+        <view class='name'>毛**线</view>
+        <view class='grade'>铂金PLUS</view>
+      </view>
+      <view class='cust-right'>
+        <view class='points'>★★★★☆</view>
+      </view>
+    </view>
+    <view class='content'>阿姨一过来就热情打招呼，准时，态度非常好，工具齐全，操作熟练，话不多，药剂也带了，真的非常好。这个阿姨必须给五星好评啊</view>
+    <view class='photo'>
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+      <image class='pics' src='../../images/image.png'></image>
+    </view>
+
+  </view>
+  <!--/block-->
+
+  <view class='next'>
+    <view class='save' bindtap='onSaving'>加入收藏</view>
+    <view class='book' bindtap='onBooking'>立即预约</view>
+  </view>
+
+  <block wx:if="{{!items-remark}}">
+    <view class='tips'>{{tips}}</view>
+  </block>
+</view>

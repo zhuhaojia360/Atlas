@@ -1,0 +1,75 @@
+<!--pages/ReleaseSkills/ReleaseSkills.wxml-->
+<view class='page'>
+  <form bindsubmit='releaseSuccess' report-submit='true'>
+    <!--view class='block'>联系方式</view-->
+    <view class='input'>
+      <!--image class='releaseIcon' src='../../releaseIcon/name.png'></image-->
+      <view class='inputColumn'>
+        <input placeholder='{{tipsName}}' bindblur='inputNameRight' name='name' placeholder-style='color:#B8B8B8'></input>
+      </view>
+      <image class='rightArrow' wx:if='{{inputName == true}}' src='../../releaseIcon/inputRight.png'></image>
+      <image class='rightArrow' wx:if='{{inputName == false}}' src='../../releaseIcon/inputError.png'></image>
+    </view>
+
+    <view class='input'>
+      <view class="inputColumn">
+        <input type="number" bindblur="inputTelephoneRight" placeholder='{{tipsTelephone}}' name="telephone" placeholder-style="color:#B8B8B8" />
+      </view>
+      <image class="rightArrow" wx:if="{{inputTelephone==true}}" src="../../releaseIcon/inputRight.png"></image>
+      <image class="rightArrow" wx:elif="{{inputTelephone==false}}" src="../../releaseIcon/inputError.png"></image>
+    </view>
+
+    <!--view class='input'>
+      <view class="inputColumn">
+        <picker bindchange="skillsChange" name="skills" value="{{skillsArray}}" range="{{skillsArray}}">
+          <view class="picker">
+            <text class="grey">{{skills}}</text>
+          </view>
+        </picker>
+      </view>
+    </view-->
+
+    <!--view class='block'>所在区域</view-->
+    <view class='input'>
+      <view class="inputColumn">
+        <picker bindchange="regionChange" mode='region' name='region' value="{{region}}" custom-item='{{customItem}}'>
+          <view class="picker">
+            <text class="grey">{{region[0]}},{{region[1]}},{{region[2]}}</text>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class='input'>
+      <view class="inputColumn">
+        <input bindblur="inputVillageRight" placeholder='{{tipsVillage}}' name="village" placeholder-style="color:#B8B8B8" />
+      </view>
+      <image class="rightArrow" wx:if="{{inputVillage==true}}" src="../../releaseIcon/inputRight.png"></image>
+      <image class="rightArrow" wx:elif="{{inputVillage==false}}" src="../../releaseIcon/inputError.png"></image>
+    </view>
+
+    <view class='block'>我有本事</view>
+    <view class="othersCheck" style="padding-top:35rpx;padding-bottom:20rpx;">
+      <view class="othersItem" wx:for="{{traitList}}" wx:key='' data-index="{{index}}" bindtap="chooseSkillsTrait" style="{{item.choose=='true'?'background-color:#4C4C4C;border: 1rpx solid #4C4C4C;color:#fff':' background-color: #fff;  border: 1rpx solid #c6c4c4;' }}">
+        <view style="padding:15rpx;">{{item.name}}</view>
+      </view>
+    </view>
+
+    <view class='block'>我更专业</view>
+    <view class="othersCheck" style="padding-top:35rpx;padding-bottom:20rpx;">
+      <view class="othersItem" wx:for="{{toolsList}}" wx:key='' data-index="{{index}}" bindtap="chooseTools" style="{{item.choose=='true'?'background-color:#4C4C4C;border: 1rpx solid #4C4C4C;color:#fff':' background-color: #fff;  border: 1rpx solid #c6c4c4;' }}">
+        <view style="padding:15rpx;">{{item.name}}</view>
+      </view>
+    </view>
+
+    <view class='input'>
+      <view class="inputColumn">
+        <input bindblur="inputRemarkRight" maxlength='20' placeholder='{{tipsRemark}}' name="remark" placeholder-style="color:#B8B8B8" />
+      </view>
+    </view>
+
+    <!--text name='price'>{{price}}</text-->
+
+    <button class="submitButton" formType="submit" style='margin-top:30rpx;'>立即发布</button>
+  </form>
+</view>

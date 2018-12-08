@@ -1,0 +1,26 @@
+<!--pages/Skills/Skills.wxml-->
+<view class='containner'>
+  <view class='activities'>
+    <block wx:for="{{items}}" wx:key="i">
+      <view class='activity' bindtap='' data-id='{{item.objectId}}' data-index='{{item.account}}'>
+        <!--view class='item-left'>
+          <image class='image' src='{{item.avatarUrl}}'></image>
+        </view-->
+        <view class='item-left'>
+          <text class='name'>{{item.name}}</text>
+        </view>
+        <view class='item-right'>
+          <text class='service' bindtap='onPhoneCall'>{{item.telephone}}</text>
+          <text class='village'>{{item.district}} · {{item.village}}</text>
+          <text class='village'>{{item.skills}}</text>
+        </view>
+        <!--view class='item-middle'>
+          <text class='price'>{{item.tools}}</text>
+        </view>
+        <view class='item-right'>
+          <text class='price'>{{item.price}}</text>
+        </view-->
+      </view>
+    </block>
+  </view>
+</view>

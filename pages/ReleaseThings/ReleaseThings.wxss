@@ -1,0 +1,253 @@
+.page {
+  font-family: 'PingFang SC','Helvetica Neue',Helvetica,'Droid Sans Fallback','Microsoft Yahei',sans-serif;
+  height: 100%;
+  background:  #efefef;
+}
+
+.item-ayi{
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  margin-top: 10rpx;
+}
+
+.item-left{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+}
+
+.avatar{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.nickname{
+  width:120rpx;
+  height: 50rpx;
+  font-size: 10pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-right{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10rpx;
+}
+
+.detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14rpx;
+}
+
+.age, .sex, .origin, .realname, .distance, .skills, .totaltimes, .remarktimes{
+  font-size: 9pt;
+}
+
+.item-skills{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 14rpx;
+}
+
+.block {
+  height: 50rpx;
+  width: 150rpx;
+  background-color: #f6f6f6;
+  color: #fff;
+  font-size: 35rpx;
+  border-radius: 0rpx 35rpx 35rpx 0rpx;
+  padding: 10rpx 15rpx 10rpx 30rpx;
+  background: linear-gradient(to right, #b8b8b8, #4c4c4c);
+}
+
+.input{
+  margin-top: 5rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+  background-color: #fff;
+  font-size: 12pt;
+  color: #000;
+  padding: 0rpx 16rpx;
+  border-bottom: 1rpx solid #b8b8b8;
+}
+
+.input-detail, .input-remark{
+  margin-top: 5rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 200rpx;
+  background-color: #fff;
+  font-size: 12pt;
+  color: #000;
+  padding: 0rpx 20rpx;
+  border-bottom: 1rpx solid #b8b8b8;
+}
+
+.input-tag, .input-unit{
+  font-size: 10pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180rpx;
+}
+
+.input-value{
+  width: 100%;
+  font-size: 10pt;
+  color: #4c4c4c;
+}
+
+.input-datetime{
+  width: 100%;
+  font-size: 12pt;
+  color: #4c4c4c;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.picker-datetime{
+  padding: 0rpx 50rpx;
+}
+
+
+.address{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 10rpx;
+}
+
+.addr-txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 10pt;
+  padding: 0rpx 16rpx;
+}
+
+.addr-value{
+  height: 60rpx;
+  padding: 0rpx 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10pt;
+}
+
+.addr-link{
+  width: 60rpx;
+  height: 60rpx;
+  padding: 10rpx 16rpx;
+}
+
+.column{
+  position: relative;
+  align-items: center;
+  display: flex;
+  margin: 40rpx 0rpx 0rpx 2.5%;
+  width: 90%;
+  padding: 15rpx 0rpx 15rpx 0rpx;
+  border: 1rpx solid #fe4c40;
+  border-radius: 50rpx;
+}
+
+.releaseIcon {
+  height: 50rpx;
+  width: 50rpx;
+  margin: 0rpx 10rpx 0rpx 20rpx;
+}
+
+.tip {
+  font-size: 35rpx;
+  color: #fe4c40;
+  width: 180rpx;
+}
+
+.rightArrow {
+  position: absolute;
+  right: 15rpx;
+  width: 35rpx;
+  height: 35rpx;
+  float: right;
+}
+
+.thingsTrait {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.thingsItem {
+  margin: 8rpx;
+  padding: 15rpx 25rpx 15rpx 25rpx;
+  background-color: #efefef;
+  border-radius: 40rpx;
+  display: inline;
+  color: #c6c4c4;
+}
+
+.tip-photo {
+  height: 50rpx;
+  width: 150rpx;
+  background-color: #fe4c40;
+  color: #fff;
+  font-size: 35rpx;
+  border-radius: 0rpx 35rpx 35rpx 0rpx;
+  padding: 10rpx 15rpx 10rpx 30rpx;
+  background: linear-gradient(to right, #fe8300, #fe4c40);
+}
+
+.othersCheck {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  padding-bottom: 30rpx;
+}
+
+.othersItem {
+  margin: 8rpx;
+  background-color: #efefef;
+  float: left;
+  border-radius: 40rpx;
+  color: #c6c4c4;
+}
+
+.inputRemark {
+  float: right;
+  font-size: 35rpx;
+  width: 100%;
+  padding: 0rpx 15rpx 0rpx 15rpx;
+}
+
+.submitButton {
+  width: 100%;
+  height: 90rpx;
+  background-color: #333333;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

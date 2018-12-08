@@ -1,0 +1,10 @@
+<view class='page'>
+  <view class='item'>
+    <text class='phone-txt'>186 7001 1098</text>
+    <button class="phone-btn" formType="submit" style='margin-top:30rpx;background-color: #333333;' bindtap='onPhoneCall'>立即拨打电话</button>
+    <view class='barcode'>
+      <image src='{{imgUrl}}' class='imagewrap' id='1' bindtap='onImageClick'></image>
+    </view>
+    <button class="phone-btn" formType="submit" style='margin-top:30rpx;background-color: #333333;' bindtap='onCopyTBL'>点击复制微信号</button>
+  </view>
+</view>

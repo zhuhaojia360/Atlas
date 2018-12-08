@@ -1,0 +1,177 @@
+/* pages/My/My.wxss */
+
+.page {
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  background: #fff;
+}
+
+.marks{
+  position: relative;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  background: red;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+
+.nav {
+  position: relative;
+  width: 750rpx;
+  height: 350rpx;
+  color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.useravatar, .logo{
+  overflow: hidden;
+  display: block;
+  width: 180rpx;
+  height: 180rpx;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 20rpx;
+  border-radius: 50%;
+  margin-top: 50rpx;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.username, .button, .tips{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 12rpx;
+  color: #4c4c4c;
+}
+
+.messages {
+  margin: 0rpx 0rpx 0rpx 0rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.request, .accept{
+  padding-top: 30rpx;
+  text-align: center;
+  border-radius: 5px;
+  width: 140px;
+  height: 38px;
+  display: inline-block;
+  margin: 20rpx;
+  color: #fff;
+  font-size: 36rpx;
+  background-color: #B8B8B8;
+}
+
+.release {
+  margin: 0rpx 0rpx 0rpx 0rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.manage{
+  background-color: #efefef;
+  height: 100%;
+}
+
+.item{
+  height: 110rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-top: 3rpx solid #b8b8b8;
+}
+
+.img{
+  display: flex;
+  width: 68rpx;
+  height: 68rpx;
+  margin: 0rpx 0rpx 0rpx 20rpx;
+}
+
+.txt{
+  width: 70%;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin: 0rpx 0rpx;
+}
+
+.arrow{
+  display: flex;
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0rpx 20rpx;
+}
+
+.things, .skills{
+  padding-top: 30rpx;
+  text-align: center;
+  border-radius: 5px;
+  width: 140px;
+  height: 38px;
+  display: inline-block;
+  margin: 20rpx;
+  color: #fff;
+  font-size: 36rpx;
+  background-color: #333333;
+}
+
+.message, .order, .address{
+  padding-top: 7px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  width: 80px;
+
+  margin: 20rpx;
+  color: #4C4C4C;
+  font-size: 36rpx;
+  background-color: #fff;
+}
+
+
+.userInfo{
+  width: 100%;
+  display: flex;
+  background: #fff;
+  margin-top: 20rpx;
+  align-items:center;
+}
+
+.nickName,.telephone,.certification,.useHelp,.contactUs,.aboutUs {
+  margin: 0 30rpx;
+  display: flex;
+  width:100%;
+  align-items: center;
+  height: 80rpx;
+  background-color: #fff;
+  color: #000;
+  flex-flow: row;
+  border-bottom: 1rpx solid #b8b8b8;
+  font-size: 35rpx;
+}
+
+.tag {
+  float: left;
+  display: flex;
+  width: 50%;
+  color: #4c4c4c;
+  justify-content: flex-start;
+}
+
+.info {
+  float: right;
+  display: flex;
+  width: 80%;
+  color: #B8B8B8;
+  justify-content: flex-end;
+}

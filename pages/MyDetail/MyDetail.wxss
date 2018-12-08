@@ -1,0 +1,89 @@
+/* pages/My/My.wxss */
+
+.page {
+  height: 100%;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  background: #fff;
+}
+
+.nav {
+  position: relative;
+  width: 750rpx;
+  height: 300rpx;
+  color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+
+.useravatar{
+  overflow: hidden;
+  display: block;
+  width: 180rpx;
+  height: 180rpx;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 20rpx;
+  border-radius: 50%;
+  margin-top: 50rpx;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.username{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 12rpx;
+  color: #4c4c4c;
+}
+
+.userInfo{
+  width: 100%;
+  display: flex;
+  background: #fff;
+  margin-top: 20rpx;
+  align-items:center;
+}
+
+.nickName,.telephone,.certification,.useHelp,.contactUs,.aboutUs {
+  margin: 0 30rpx;
+  display: flex;
+  width:100%;
+  align-items: center;
+  height: 80rpx;
+  background-color: #fff;
+  color: #000;
+  flex-flow: row;
+  border-bottom: 1rpx solid #b8b8b8;
+  font-size: 35rpx;
+}
+
+.tag {
+  float: left;
+  display: flex;
+  width: 20%;
+  color: #4c4c4c;
+  justify-content: flex-start;
+}
+
+.info {
+  float: right;
+  display: flex;
+  width: 80%;
+  color: #B8B8B8;
+  justify-content: flex-end;
+}
+
+.logout {
+  width: 80%;
+  height: 90rpx;
+  background-color: #B8B8B8;
+  border-radius: 30px;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

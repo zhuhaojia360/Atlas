@@ -1,0 +1,22 @@
+<scroll-view scroll-y="true">
+  <view class="tips" wx:if="{{!list.length}}"> {{tips}} </view>
+  <view class="item-avatar-md" wx:for="{{list}}" wx:key="item.id" wx:for-item="item" wx:for-index="index" data-index="{{index}}" data-name="{{item.name}}" data-id="{{item.id}}" bindtap="goPage">
+    <view class="marks" wx:if="{{item.count}}">
+      <text>{{item.count}}</text>
+    </view>
+    <image src="{{item.avatar}}"></image>
+    <view class="item-text">
+      <view class="text_box">
+        <view class="flex">
+          <text class="title">{{item.name}}</text>
+        </view>
+        <view class="flex">
+          <text class="message">{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="item-time padding_half">
+      <text class="messagetime">{{item.updated}}</text>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,213 @@
+<view class='page'>
+  <view class='nav'>
+    <view class="nav-son {{shownavindex == 1 ? 'active' : ''}}" bindtap='' data-nav='1'>
+      <view class='condition'>{{location}}</view>
+      <image class='icon' src='../../images/down.png'></image>
+    </view>
+    <view class="nav-son {{shownavindex == 2 ? 'active' : ''}}" bindtap='' data-nav='2'>
+      <view class='condition'>{{sort}}</view>
+      <image class='icon' src='../../images/down.png'></image>
+    </view>
+    <view class="nav-son {{shownavindex == 3 ? 'active' : ''}}" bindtap='' data-nav='3'>
+      <view class='condition'>{{filter}}</view>
+      <image class='icon' src='../../images/down.png'></image>
+    </view>
+  </view>
+
+  <!--  选择区域  -->
+  <!--view class="temp temp2 {{serviceOpen?'slidown':'slidup'}} {{serviceShow? 'disappear':''}}">
+    <view data-service='{{item}}' hover-class='navigator-hover' wx:for="{{content}}" wx:key="{{item.id}}" bindtap='selectService' style='padding-left:10px'>{{item}}</view>
+  </view-->
+
+  <!--  排序方法  -->
+  <!--view class="temp temp2 {{sortOpen?'slidown':'slidup'}} {{sortShow? 'disappear':''}}">
+    <view data-service='{{item}}' hover-class='navigator-hover' wx:for="{{content}}" wx:key="{{item.id}}" bindtap='selectService' style='padding-left:10px'>{{item}}</view>
+  </view-->
+
+  <!-- 筛选条件 -->
+  <!--view class="temp temp2 {{filterOpen?'slidown':'slidup'}} {{filterShow? 'disappear':''}}">
+    <view data-filter='{{item}}' hover-class='navigator-hover' wx:for="{{content}}" wx:key="{{item.id}}" bindtap='selectFilter' style='padding-left:10px'>{{item}}</view>
+  </view-->
+
+  <!-- 背景变灰 -->
+  <!--view class="fullbg {{isfull?'fullopacity':''}}" bindtap='hidebg'></view-->
+
+  <scroll-view>
+    <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <view class='item-left'>
+          <image class='avatar' src='../../images/logo.png'></image>
+          <text class='nickname'>陈尔尔</text>
+        </view>
+        <view class='item-right'>
+          <view class='detail'>
+            <text class='age'>年龄：45岁</text>
+            <text class='sex'>性别：女</text>
+            <text class='origin'>籍贯：湖南宁乡</text>
+          </view>
+          <view class='detail'>
+            <text class='realname'>实名：430105****1234</text>
+            <text class='distance'>距离：3KM</text>
+          </view>
+          <view class='detail'>
+            <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
+          </view>
+          <view class='detail'>
+            <text class='totaltimes'>服务: 288次</text>
+            <text class='remarktimes'>评价: 230次</text>
+            <text class='score'>★★★★☆</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{!items}}">
+      <view class='tips'>{{tips}}</view>
+    </block>
+
+    <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <view class='item-left'>
+          <image class='avatar' src='../../images/logo.png'></image>
+          <text class='nickname'>陈尔尔</text>
+        </view>
+        <view class='item-right'>
+          <view class='detail'>
+            <text class='age'>年龄：45岁</text>
+            <text class='sex'>性别：女</text>
+            <text class='origin'>籍贯：湖南宁乡</text>
+          </view>
+          <view class='detail'>
+            <text class='realname'>实名：430105****1234</text>
+            <text class='distance'>距离：3KM</text>
+          </view>
+          <view class='detail'>
+            <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
+          </view>
+          <view class='detail'>
+            <text class='totaltimes'>服务: 288次</text>
+            <text class='remarktimes'>评价: 230次</text>
+            <text class='score'>★★★★☆</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <view class='item-left'>
+          <image class='avatar' src='../../images/logo.png'></image>
+          <text class='nickname'>陈尔尔</text>
+        </view>
+        <view class='item-right'>
+          <view class='detail'>
+            <text class='age'>年龄：45岁</text>
+            <text class='sex'>性别：女</text>
+            <text class='origin'>籍贯：湖南宁乡</text>
+          </view>
+          <view class='detail'>
+            <text class='realname'>实名：430105****1234</text>
+            <text class='distance'>距离：3KM</text>
+          </view>
+          <view class='detail'>
+            <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
+          </view>
+          <view class='detail'>
+            <text class='totaltimes'>服务: 288次</text>
+            <text class='remarktimes'>评价: 230次</text>
+            <text class='score'>★★★★☆</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+
+    <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <view class='item-left'>
+          <image class='avatar' src='../../images/logo.png'></image>
+          <text class='nickname'>陈尔尔</text>
+        </view>
+        <view class='item-right'>
+          <view class='detail'>
+            <text class='age'>年龄：45岁</text>
+            <text class='sex'>性别：女</text>
+            <text class='origin'>籍贯：湖南宁乡</text>
+          </view>
+          <view class='detail'>
+            <text class='realname'>实名：430105****1234</text>
+            <text class='distance'>距离：3KM</text>
+          </view>
+          <view class='detail'>
+            <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
+          </view>
+          <view class='detail'>
+            <text class='totaltimes'>服务: 288次</text>
+            <text class='remarktimes'>评价: 230次</text>
+            <text class='score'>★★★★☆</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+
+    <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <view class='item-left'>
+          <image class='avatar' src='../../images/logo.png'></image>
+          <text class='nickname'>陈尔尔</text>
+        </view>
+        <view class='item-right'>
+          <view class='detail'>
+            <text class='age'>年龄：45岁</text>
+            <text class='sex'>性别：女</text>
+            <text class='origin'>籍贯：湖南宁乡</text>
+          </view>
+          <view class='detail'>
+            <text class='realname'>实名：430105****1234</text>
+            <text class='distance'>距离：3KM</text>
+          </view>
+          <view class='detail'>
+            <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
+          </view>
+          <view class='detail'>
+            <text class='totaltimes'>服务: 288次</text>
+            <text class='remarktimes'>评价: 230次</text>
+            <text class='score'>★★★★☆</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+
+    <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <view class='item-left'>
+          <image class='avatar' src='../../images/logo.png'></image>
+          <text class='nickname'>陈尔尔</text>
+        </view>
+        <view class='item-right'>
+          <view class='detail'>
+            <text class='age'>年龄：45岁</text>
+            <text class='sex'>性别：女</text>
+            <text class='origin'>籍贯：湖南宁乡</text>
+          </view>
+          <view class='detail'>
+            <text class='realname'>实名：430105****1234</text>
+            <text class='distance'>距离：3KM</text>
+          </view>
+          <view class='detail'>
+            <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
+          </view>
+          <view class='detail'>
+            <text class='totaltimes'>服务: 288次</text>
+            <text class='remarktimes'>评价: 230次</text>
+            <text class='score'>★★★★☆</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{!items}}">
+      <view class='tips'>{{tips}}</view>
+    </block>
+  </scroll-view>
+</view>

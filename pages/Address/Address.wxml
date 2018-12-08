@@ -1,0 +1,60 @@
+<view class='page'>
+  <view class='item'>
+    <view class='item-left'>
+      <view class='cust'>
+        <view class='cust-name'>左邻右舍</view>
+        <view class='cust-phone'>186****1098</view>
+        <view class='cust-default'>默认</view>
+        <view class='cust-tag'>家</view>
+      </view>
+      <view class='address'>
+        <view class='addr-region'>湖南省长沙市岳麓区</view>
+        <view class='addr-village'>金茂府二期</view>
+        <view class='addr-detail'>8栋一单元888</view>
+      </view>
+    </view>
+    <view class='item-right' bindtap='updateAddress'>
+      <image class='addr-edit' src='../../images/address.png'></image>
+    </view>
+  </view>
+
+  <view class='item'>
+    <view class='item-left'>
+      <view class='cust'>
+        <view class='cust-name'>左邻右舍</view>
+        <view class='cust-phone'>186****1098</view>
+        <view class='cust-default'>默认</view>
+        <view class='cust-tag'>家</view>
+      </view>
+      <view class='address'>
+        <view class='addr-region'>湖南省长沙市岳麓区</view>
+        <view class='addr-village'>金茂府二期</view>
+        <view class='addr-detail'>8栋一单元888</view>
+      </view>
+    </view>
+    <view class='item-right' bindtap='updateAddress'>
+      <image class='addr-edit' src='../../images/address.png'></image>
+    </view>
+  </view>
+
+  <view class='item'>
+    <view class='item-left'>
+      <view class='cust'>
+        <view class='cust-name'>左邻右舍</view>
+        <view class='cust-phone'>186****1098</view>
+        <view class='cust-default'>默认</view>
+        <view class='cust-tag'>家</view>
+      </view>
+      <view class='address'>
+        <view class='addr-region'>湖南省长沙市岳麓区</view>
+        <view class='addr-village'>金茂府二期</view>
+        <view class='addr-detail'>8栋一单元888</view>
+      </view>
+    </view>
+    <view class='item-right' bindtap='updateAddress'>
+      <image class='addr-edit' src='../../images/address.png'></image>
+    </view>
+  </view>
+
+  <button class="submitButton" formType="submit" style='margin-top:30rpx;' bindtap='addAddress'>新增地址</button>
+</view>

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/Things/Things",
+    "pages/My/My",
+    "pages/Skills/Skills",
+    "pages/Chat/Chat",
+    "pages/logs/logs",
+    "pages/ReleaseThings/ReleaseThings",
+    "pages/ReleaseSkills/ReleaseSkills",
+    "pages/Login/Login",
+    "pages/Register/Register",
+    "pages/Auth/Auth",
+    "pages/ThingsDetail/ThingsDetail",
+    "pages/SkillsDetail/SkillsDetail",
+    "pages/MyDetail/MyDetail",
+    "pages/ChatInput/ChatInput",
+    "pages/ChatList/ChatList",
+    "pages/MyAccept/MyAccept",
+    "pages/Order/Order",
+    "pages/Remarking/Remarking",
+    "pages/Address/Address",
+    "pages/Address/AddAddress/AddAddress",
+    "pages/Address/UpdateAddress/UpdateAddress",
+    "pages/Contact/Contact",
+    "pages/Switch/Switch",
+    "pages/AyiCenter/AyiCenter"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "左邻右舍",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#4C4C4C",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/booking_active.png",
+        "iconPath": "images/booking.png",
+        "pagePath": "pages/Things/Things",
+        "text": "活儿"
+      },
+      {
+        "selectedIconPath": "images/order_active.png",
+        "iconPath": "images/order.png",
+        "pagePath": "pages/Order/Order",
+        "text": "订单"
+      },
+      {
+        "selectedIconPath": "images/user_active.png",
+        "iconPath": "images/user.png",
+        "pagePath": "pages/My/My",
+        "text": "我的"
+      }
+    ]
+  }
+}

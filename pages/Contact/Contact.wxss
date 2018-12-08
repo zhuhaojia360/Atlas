@@ -1,0 +1,42 @@
+.page {
+  height: 100%;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  background: #fff;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-txt{
+  display: flex;
+  font-size: 26pt;
+  padding-top: 80rpx;
+}
+
+.phone-btn{
+  width: 80%;
+  height: 90rpx;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.barcode{
+  width: 500rpx;
+  height: 500rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60rpx;
+}
+
+.imgwrap{
+  width: 100%;
+}

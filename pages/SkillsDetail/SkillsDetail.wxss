@@ -1,0 +1,85 @@
+/* pages/SkillsDetail/SkillsDetail.wxss */
+.container{
+  align-items: center;
+}
+
+.item-left{
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.nav{
+  position: relative;
+  width: 750rpx;
+  height: 350rpx;
+  color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+
+.activities{
+  margin: 10rpx;
+  align-items: center;
+}
+
+.useravatar, .logo{
+  overflow: hidden;
+  display: block;
+  width: 180rpx;
+  height: 180rpx;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: 220rpx;
+  border-radius: 50%;
+  margin-top: 12rpx;
+  margin-bottom: 12rpx;
+  border: 2px solid #fff;
+  align-items: center;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.username, .button, .tips{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 12rpx;
+  color: #4c4c4c;
+}
+
+.activity{
+  margin: 20rpx;
+  height: 100%;
+  padding: 20rpx;
+  background-color: #e6e6e6;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.activity .service{
+  width: 100%;
+  font-size: 30rpx;
+  display: flex;
+  padding: 10rpx;
+}
+
+.name{
+  width: 100%;
+  font-size: 35rpx;
+  display: flex;
+  padding: 10rpx;
+}
+
+.submitButton {
+  width: 80%;
+  height: 90rpx;
+  background-color: #333333;
+  border-radius: 30px;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

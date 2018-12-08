@@ -1,0 +1,276 @@
+<view class='page'>
+  <view class='nav'>
+    <view class="nav-son {{shownavindex == 1 ? 'active' : ''}}" bindtap='' data-nav='1'>
+      <view class='phase'>{{onVisiting}}</view>
+      <!--image class='line' src='../../images/line.png'></image-->
+    </view>
+    <view class="nav-son {{shownavindex == 2 ? 'active' : ''}}" bindtap='' data-nav='2'>
+      <view class='phase'>{{onProcessing}}</view>
+      <!--image class='line' src='../../images/line.png'></image-->
+    </view>
+    <view class="nav-son {{shownavindex == 3 ? 'active' : ''}}" bindtap='' data-nav='3'>
+      <view class='phase'>{{onMarking}}</view>
+      <!--image class='line' src='../../images/line.png'></image-->
+    </view>
+  </view>
+
+  <!--view class='auth' wx:if='{{isAuth && isLogin}}'>
+    <view class='tips'>{{tips}}</view>
+    <view class='button'>登录或注册</view>
+  </view-->
+  <!--view wx:elif="{{!isAuth && !isLogin && !userInfo}}"-->
+  <view class='task'>
+    <!--block wx:for="{{items}}" wx:key="i" wx:if="{{items}}"-->
+    <block>
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <view class='item-static'>
+          <view class='item-left'>
+            <view class='stamp'>日常保洁</view>
+            <text class='onProcessing'>服务中</text>
+          </view>
+          <view class='item-right'>
+            <view class='tags'>
+              <view class='tag'>擦玻璃</view>
+              <view class='tag'>带清洁剂</view>
+              <view class='tag'>健康证</view>
+              <view class='tag'>意外险</view>
+              <view class='tag'>高温消毒</view>
+              <view class='tag'>专业除螨</view>
+              <view class='tag'>洗窗帘</view>
+              <view class='tag'>洗油烟机</view>
+            </view>
+            <view class='tags'>
+              <view class='content'>最好带专业工具和适量清洁剂，我们家里没有工具。最好带吸尘器。</view>
+            </view>
+          </view>
+        </view>
+        <view class='item-line'>
+          <view></view>
+          <view></view>
+        </view>
+        <view class='item-ayi'>
+          <view class='item-left'>
+            <view class='bidding'>
+              <view class='bid-price'>
+                <!--text class='flag'></text>
+                <text class='num'></text>
+                <text class='flag'>55</text-->
+                <text class='onProcessing'>55/小时</text>
+              </view>
+              <!--view class='bid-count'>
+                <text class='flag'></text>
+                <text class='num'></text>
+                <text class='flag'></text>
+              </view-->
+            </view>
+            <!--image class='s' src='../../images/pic.png'></image>
+            <text class='nickname'>陈尔尔</text-->
+          </view>
+          <view class='item-dynamic'>
+            <view class='detail'>
+              <text class='village'>小区：岳麓区金茂府</text>
+              <text class='address'>接单后查看详细地址</text>
+            </view>
+            <view class='detail'>
+              <text class='duration'>预计时长：6小时/人</text>
+              <text class='remaining'>距开始：1小时35分钟</text>
+            </view>
+          </view>
+        </view>
+        
+        <view class='item-action' wx:if="{{shownavindex == 1}}">
+          <view class='taking'>马上抢单</view>
+        </view>
+        <view class='item-action' wx:elif="{{shownavindex == 2}}">
+          <view class='save'>收藏技师</view>
+          <view class='contact'>联系客服</view>
+          <view class='receipt'>查看发票</view>
+          <view class='remark'>评价晒单</view>
+          <!--view class='booking'>再次预约</view>
+          <view class='cancel'>取消预约</view-->
+        </view>
+        <view class='item-action' wx:elif="{{shownavindex == 3}}">
+          <view class='save'>收藏技师</view>
+          <view class='contact'>联系客服</view>
+          <view class='receipt'>查看发票</view>
+          <view class='remark'>评价晒单</view>
+          <!--view class='booking'>再次预约</view>
+          <view class='cancel'>取消预约</view-->
+        </view>
+      </view>
+    </block>
+
+    <block>
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <view class='item-static'>
+          <view class='item-left'>
+            <view class='stamp'>日常保洁</view>
+            <text class='onProcessing'>服务中</text>
+          </view>
+          <view class='item-right'>
+            <view class='tags'>
+              <view class='tag'>擦玻璃</view>
+              <view class='tag'>带清洁剂</view>
+              <view class='tag'>健康证</view>
+              <view class='tag'>意外险</view>
+              <view class='tag'>高温消毒</view>
+              <view class='tag'>专业除螨</view>
+              <view class='tag'>洗窗帘</view>
+              <view class='tag'>洗油烟机</view>
+            </view>
+            <view class='tags'>
+              <view class='content'>最好带专业工具和适量清洁剂，我们家里没有工具。最好带吸尘器。</view>
+            </view>
+          </view>
+        </view>
+        <view class='item-line'>
+          <view></view>
+          <view></view>
+        </view>
+        <view class='item-ayi'>
+          <view class='item-left'>
+            <view class='bidding'>
+              <view class='bid-price'>
+                <!--text class='flag'></text>
+                <text class='num'></text>
+                <text class='flag'>55</text-->
+                <text class='onProcessing'>55/小时</text>
+              </view>
+              <!--view class='bid-count'>
+                <text class='flag'></text>
+                <text class='num'></text>
+                <text class='flag'></text>
+              </view-->
+            </view>
+            <!--image class='s' src='../../images/pic.png'></image>
+            <text class='nickname'>陈尔尔</text-->
+          </view>
+          <view class='item-dynamic'>
+            <view class='detail'>
+              <text class='village'>小区：岳麓区金茂府</text>
+              <text class='address'>接单后查看详细地址</text>
+            </view>
+            <view class='detail'>
+              <text class='duration'>预计时长：6小时/人</text>
+              <text class='remaining'>距开始：1小时35分钟</text>
+            </view>
+          </view>
+        </view>
+        
+        <view class='item-action' wx:if="{{shownavindex == 1}}">
+          <view class='taking'>马上抢单</view>
+        </view>
+        <view class='item-action' wx:elif="{{shownavindex == 2}}">
+          <view class='save'>收藏技师</view>
+          <view class='contact'>联系客服</view>
+          <view class='receipt'>查看发票</view>
+          <view class='remark'>评价晒单</view>
+          <!--view class='booking'>再次预约</view>
+          <view class='cancel'>取消预约</view-->
+        </view>
+        <view class='item-action' wx:elif="{{shownavindex == 3}}">
+          <view class='save'>收藏技师</view>
+          <view class='contact'>联系客服</view>
+          <view class='receipt'>查看发票</view>
+          <view class='remark'>评价晒单</view>
+          <!--view class='booking'>再次预约</view>
+          <view class='cancel'>取消预约</view-->
+        </view>
+      </view>
+    </block>
+
+
+    <block>
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <view class='item-static'>
+          <view class='item-left'>
+            <view class='stamp'>日常保洁</view>
+            <text class='onProcessing'>服务中</text>
+          </view>
+          <view class='item-right'>
+            <view class='tags'>
+              <view class='tag'>擦玻璃</view>
+              <view class='tag'>带清洁剂</view>
+              <view class='tag'>健康证</view>
+              <view class='tag'>意外险</view>
+              <view class='tag'>高温消毒</view>
+              <view class='tag'>专业除螨</view>
+              <view class='tag'>洗窗帘</view>
+              <view class='tag'>洗油烟机</view>
+            </view>
+            <view class='tags'>
+              <view class='content'>最好带专业工具和适量清洁剂，我们家里没有工具。最好带吸尘器。</view>
+            </view>
+          </view>
+        </view>
+        <view class='item-line'>
+          <view></view>
+          <view></view>
+        </view>
+        <view class='item-ayi'>
+          <view class='item-left'>
+            <view class='bidding'>
+              <view class='bid-price'>
+                <!--text class='flag'></text>
+                <text class='num'></text>
+                <text class='flag'>55</text-->
+                <text class='onProcessing'>55/小时</text>
+              </view>
+              <!--view class='bid-count'>
+                <text class='flag'></text>
+                <text class='num'></text>
+                <text class='flag'></text>
+              </view-->
+            </view>
+            <!--image class='s' src='../../images/pic.png'></image>
+            <text class='nickname'>陈尔尔</text-->
+          </view>
+          <view class='item-dynamic'>
+            <view class='detail'>
+              <text class='village'>小区：岳麓区金茂府</text>
+              <text class='address'>接单后查看详细地址</text>
+            </view>
+            <view class='detail'>
+              <text class='duration'>预计时长：6小时/人</text>
+              <text class='remaining'>距开始：1小时35分钟</text>
+            </view>
+          </view>
+        </view>
+        
+        <view class='item-action' wx:if="{{shownavindex == 1}}">
+          <view class='taking'>马上抢单</view>
+        </view>
+        <view class='item-action' wx:elif="{{shownavindex == 2}}">
+          <view class='save'>收藏技师</view>
+          <view class='contact'>联系客服</view>
+          <view class='receipt'>查看发票</view>
+          <view class='remark'>评价晒单</view>
+          <!--view class='booking'>再次预约</view>
+          <view class='cancel'>取消预约</view-->
+        </view>
+        <view class='item-action' wx:elif="{{shownavindex == 3}}">
+          <view class='save'>收藏技师</view>
+          <view class='contact'>联系客服</view>
+          <view class='receipt'>查看发票</view>
+          <view class='remark'>评价晒单</view>
+          <!--view class='booking'>再次预约</view>
+          <view class='cancel'>取消预约</view-->
+        </view>
+      </view>
+    </block>
+
+    <!--block wx:if="{{!items}}"-->
+    <!--block>
+        <view class='notes'>{{notes}}</view>
+      </block-->
+  </view>
+
+  <view class='personal'>
+    <view class='personal-btn' bindtap='onCenter'>个人中心</view>
+  </view>
+
+  <view class='refresh'>
+    <view class='refresh-btn' bindtap=''>刷新列表</view>
+  </view>
+
+</view>

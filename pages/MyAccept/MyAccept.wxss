@@ -1,0 +1,78 @@
+/* pages/Skills/Skills.wxss */
+.container{
+  align-items: center;
+}
+
+.item-left{
+  width: 30%;
+  float: left;
+  align-items: center;
+}
+
+.item-right{
+  width: 70%;
+  float: right;
+}
+
+.name{
+  align-items: center;
+
+}
+
+.image{
+  overflow: hidden;
+  display: block;
+  width: 130rpx;
+  height: 130rpx;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: 10rpx;
+  border-radius: 50%;
+  margin-top: 15rpx;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.activities{
+  margin: 10rpx;
+}
+
+.activity{
+  margin: 20rpx;
+  padding: 20rpx;
+  height: 140rpx;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  padding-bottom: 50rpx;
+}
+
+.activity .service{
+  width: 100%;
+  margin-left: 50rpx;
+  font-size: 40rpx;
+  display: flex;
+}
+
+.activity .region{
+  width: 100%;
+  margin-left: 20rpx;
+  display: flex;
+}
+
+.activity .village{
+  margin: auto 15rpx;
+  width: 100%;
+  padding-top: 20rpx;
+  margin-left: 50rpx;
+  font-size: 26rpx;
+  display: flex;
+}
+
+.activity .datetime{
+  margin: auto 15rpx;
+  width: 100%;
+  padding-top: 20rpx;
+  margin-left: 20rpx;
+  font-size:26rpx;
+  display: flex;
+}

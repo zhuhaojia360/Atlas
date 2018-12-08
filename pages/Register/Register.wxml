@@ -1,0 +1,15 @@
+<!--pages/Register/Register.wxml-->
+<view class='page'>
+  <view class="input">
+    <input value='{{account}}' bindblur="onGetAccount" type="number" maxlength="11" placeholder="{{accountPhold}}" />
+  </view>
+  <view class="input">
+    <input value='{{password}}' bindblur="onGetPassword" type="password" maxlength="20" placeholder="{{passwordPhold}}" />
+    </view>
+    <view class="input">
+    <input value='{{passwordAgain}}' bindblur="onGetPasswordAgain" type="password" maxlength="20" placeholder="{{passwordAgainPhold}}" />
+  </view>
+  <view class='buttons'>
+    <view class="register" bindtap="onRegister">注册并登陆</view>
+  </view>
+</view>

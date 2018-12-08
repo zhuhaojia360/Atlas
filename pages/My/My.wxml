@@ -1,0 +1,78 @@
+<!--pages/My/My.wxml-->
+<view class='page'>
+  <!--用户信息展示-->
+  <view class="nav">
+    <block wx:if="{{isAuth && isLogin && userInfo}}">
+      <image class='useravatar' bindtap='onDetail' src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="username">{{userInfo.nickName}}</text>
+    </block>
+    <block wx:elif='{{!isAuth && !isLogin}}'>
+      <image class='logo' bindtap='onAuth' src='../../images/logo.png'></image>
+      <view class='tips'>{{tips}}</view>
+    </block>
+    <!--block wx:else='{{!isLogin}}'>
+      <image class='logo' bindtap='onLogin' src='../../images/logo.png'></image>
+      <view class='tips'>{{tips}}</view>
+    </block-->
+  </view>
+
+  <!--管理自己的信息-->
+  <!--view class='manage'>
+      <view class='message' bindtap='onThings'>消息</view>
+      <view class='order' bindtap='onThings'>订单</view>
+      <view class='address' bindtap='onSkills'>地址</view>
+    </view-->
+
+  <view class='manage'>
+    <view bindtap='onDetail' class='item'>
+      <image class='img' src='../../images/icon/creative.png'></image>
+      <text class='txt'>个人信息</text>
+      <image class='arrow' src='../../images/icon/right.png'></image>
+    </view>
+    <view bindtap='onAddress' class='item'>
+      <image class='img' src='../../images/icon/settings_light.png'></image>
+      <text class='txt'>管理地址</text>
+      <image class='arrow' src='../../images/icon/right.png'></image>
+    </view>
+    <!--view bindtap='onSave' class='item'>
+      <image class='img' src='../../images/icon/favor.png'></image>
+      <text class='txt'>我的收藏</text>
+      <image class='arrow' src='../../images/icon/right.png'></image>
+    </view-->
+    <view bindtap='onContact' class='item'>
+      <image class='img' src='../../images/icon/phone.png'></image>
+      <text class='txt'>联系客服</text>
+      <image class='arrow' src='../../images/icon/right.png'></image>
+    </view>
+    <view bindtap='onSwitch' class='item'>
+      <image class='img' src='../../images/icon/order.png'></image>
+      <text class='txt'>切换身份</text>
+      <image class='arrow' src='../../images/icon/right.png'></image>
+    </view>
+  
+  </view>
+
+  <view class='userInfo' wx:if='{{count}}'>
+    <view class='useHelp' bindtap='onAcceptDetail'>
+      <text class='tag'>收到的申请</text>
+      <view class='info'>
+        <text class='marks'>{{count}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='userInfo' wx:if='{{count}}'>
+    <view class='useHelp' bindtap='onAcceptDetail'>
+      <text class='tag'>收到的预约</text>
+      <view class='info'>
+        <text class='marks'>{{count}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <!--发布需求和技能-->
+  <!--view class='release'>
+    <view class='things' bindtap='onThings'>有·活儿</view>
+    <view class='skills' bindtap='onSkills'>有·本事</view>
+  </view-->
+</view>

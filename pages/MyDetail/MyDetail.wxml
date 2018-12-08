@@ -1,0 +1,66 @@
+<!--pages/My/My.wxml-->
+<view class='page'>
+  <!--用户信息展示-->
+  <view class="nav">
+    <block wx:if="{{isAuth && isLogin && userInfo}}">
+      <image class='useravatar' src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+    <!--block wx:elif='{{!isAuth}}'>
+      <image class='logo' bindtap='onAuth' src='../../images/logo.png'></image>
+      <view class='tips'>{{tips}}</view>
+    </block>
+    <block wx:else='{{!isLogin}}'>
+      <image class=dtap='onLogin' src='../../images/logo.png'></image>
+      <view class='tips'>{{tips}}</view>
+    </block-->
+  </view>
+
+  <view class='userInfo'>
+    <view class='nickName'>
+      <text class='tag'>昵称</text>
+      <text class='info'>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+  <view class='userInfo'>
+    <view class='telephone'>
+      <text class='tag'>手机号</text>
+      <!--text class='info'>{{userInfo.gender}}</text-->
+      <text class='info'>186 **** 1098</text>
+    </view>
+  </view>
+
+  <view class='userInfo'>
+    <view class='certification' bindtap=''>
+      <text class='tag'>实名认证</text>
+      <text class='info'>未实名</text>
+    </view>
+  </view>
+
+  <view class='userInfo'>
+    <view class='useHelp' bindtap=''>
+      <text class='tag'>使用帮助</text>
+    </view>
+  </view>
+
+  <!--view class='userInfo'>
+    <view class='contactUs' bindtap=''>
+      <text class='tag'>联系客服</text>
+    </view>
+  </view-->
+
+  <view class='userInfo'>
+    <view class='aboutUs' bindtap=''>
+      <text class='tag'>关于邻舍</text>
+    </view>
+  </view>
+
+  <button class="logout" bindtap='onLogout' formType="submit" style='margin-top:30rpx;'>退出登录</button>
+
+  <!--管理自己的信息-->
+  <!--view class='manage'>
+      <view class='message' bindtap='onThings'>消息</view>
+      <view class='order' bindtap='onThings'>订单</view>
+      <view class='address' bindtap='onSkills'>地址</view>
+    </view-->
+</view>

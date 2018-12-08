@@ -1,0 +1,134 @@
+/* pages/ReleaseSkills/ReleaseSkills.wxss */
+
+.page {
+  font-family: 'PingFang SC',
+                 'Helvetica Neue',
+                 Helvetica,
+                 'Droid Sans Fallback',
+                 'Microsoft Yahei',
+                 sans-serif;
+  height: 100%;
+  background: #fff;
+}
+
+.block {
+  height: 50rpx;
+  width: 150rpx;
+  background-color: #f6f6f6;
+  color: #fff;
+  font-size: 35rpx;
+  border-radius: 0rpx 35rpx 35rpx 0rpx;
+  padding: 10rpx 15rpx 10rpx 30rpx;
+  background: linear-gradient(to right, #b8b8b8, #4c4c4c);
+}
+
+.input {
+  margin: 30rpx;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 36rpx;
+  background-color: #fff;
+  font-size: 36rpx;
+  color: #000;
+  border-bottom: 1rpx solid #b8b8b8;
+}
+
+.column {
+  position: relative;
+  align-items: center;
+  display: flex;
+  margin: 40rpx 0rpx 0rpx 2.5%;
+  width: 90%;
+  padding: 15rpx 0rpx 15rpx 0rpx;
+  border: 1rpx solid #fe4c40;
+  border-radius: 50rpx;
+}
+
+.releaseIcon {
+  height: 50rpx;
+  width: 50rpx;
+  margin: 0rpx 10rpx 0rpx 20rpx;
+}
+
+.tip {
+  font-size: 35rpx;
+  color: #fe4c40;
+  width: 180rpx;
+}
+
+.inputColumn {
+  width: 100%;
+  font-size: 35rpx;
+  color: #4c4c4c;
+}
+
+.rightArrow {
+  position: absolute;
+  right: 15rpx;
+  width: 35rpx;
+  height: 35rpx;
+  float: right;
+}
+
+.skillsTrait {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.skillsItem {
+  margin: 8rpx;
+  padding: 15rpx 25rpx 15rpx 25rpx;
+  background-color: #efefef;
+  border-radius: 40rpx;
+  display: inline;
+  color: #c6c4c4;
+}
+
+.tip-photo {
+  height: 50rpx;
+  width: 150rpx;
+  background-color: #fe4c40;
+  color: #fff;
+  font-size: 35rpx;
+  border-radius: 0rpx 35rpx 35rpx 0rpx;
+  padding: 10rpx 15rpx 10rpx 30rpx;
+  background: linear-gradient(to right, #fe8300, #fe4c40);
+}
+
+.othersCheck {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  padding-bottom: 30rpx;
+}
+
+.othersItem {
+  margin: 8rpx;
+  background-color: #efefef;
+  float: left;
+  font-size: 30rpx;
+  border-radius: 40rpx;
+  color: #c6c4c4;
+}
+
+.inputRemark {
+  float: right;
+  font-size: 35rpx;
+  width: 100%;
+  padding: 0rpx 15rpx 0rpx 15rpx;
+}
+
+.submitButton {
+  width: 80%;
+  height: 90rpx;
+  background-color: #333333;
+  border-radius: 30px;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,73 @@
+/* pages/Auth/Auth.wxss */
+
+.page {
+  height: 100%;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  background: #fff;
+}
+
+.nav {
+  position: relative;
+  width: 750rpx;
+  height: 330rpx;
+  color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+
+.useravatar, .logo{
+  overflow: hidden;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 20rpx;
+  border-radius: 50%;
+  margin-top: 50rpx;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.username, .button{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 12rpx;
+  color: #4c4c4c;
+}
+
+
+
+
+.header {
+    margin: 90rpx 0 90rpx 50rpx;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+ 
+.header image {
+    width: 200rpx;
+    height: 200rpx;
+}
+ 
+.content {
+    margin-left: 50rpx;
+    margin-bottom: 90rpx;
+}
+ 
+.content text {
+    display: block;
+    color: #9d9d9d;
+    margin-top: 40rpx;
+}
+ 
+.botton {
+    border-radius: 80rpx;
+    margin: 70rpx 50rpx;
+    font-size: 35rpx;
+}

@@ -1,0 +1,191 @@
+/* pages/Things/Things.wxss */
+
+.page{
+  height: 100%;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  background:  #efefef;
+}
+
+.nav{
+  position: relative;
+  z-index: 98;
+  height: 78rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.nav-son{
+  color: #4C4C4C;
+  z-index: 99;
+  height: 60rpx;
+  width: 28%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 12pt;
+}
+
+.active{
+  color: #4C4C4C;
+}
+
+.condition{
+  display: inline-block;
+  font-size:35rpx;
+}
+
+.icon{
+  width:30rpx;
+  height: 30rpx;
+  margin: 0rpx 15rpx;
+}
+
+
+.temp{
+  position: absolute;
+  z-index: 4;
+}
+
+.temp view{
+    border-bottom: 1px solid #efefef;
+    font-size: 14px;
+    color: #666;
+}
+
+.temp1{
+  display: none;
+  width: 100%;
+  max-height: 550rpx;
+  overflow-y: scroll;
+  line-height: 100rpx;
+  background: #fff;
+}
+
+.temp2{
+    display: none;
+    width: 100%;
+    max-height: 750rpx;
+    overflow-y: scroll;
+    line-height:100rpx;
+    background: #fff;
+}
+
+@keyframes slidown{
+    from{
+        transform:  translateY(-100%);
+    }
+    to{
+        transform:  translateY(0%);
+    }
+}
+
+.slidown{
+  display: block;
+  animation: slidown .3s ease-in both;
+}
+
+@keyframes slidup{
+    from{
+        transform:  translateY(0%);
+    }
+    to{
+        transform:  translateY(-100%);
+    }
+}
+
+.slidup{
+    display: block;
+    animation: slidup .3s ease-in both;
+}
+
+.disappear{
+    display: none;
+}
+
+.navigator-hover{
+  opacity: 0.9;
+  transform: scale(0.9,0.9);
+}
+
+.fullbg{
+    display:none;
+    position: fixed;
+    top:0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgb(1, 1, 1);
+    transition: all 2s;
+}
+
+.fullopacity{
+    display:flex;
+    opacity: .5;
+}
+
+
+
+
+.activity{
+  margin-top: 8rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 0px;
+}
+
+.item-left{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+}
+
+.avatar{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+
+.nickname{
+  width:160rpx;
+  height: 60rpx;
+  font-size: 12pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-right{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10rpx;
+}
+
+.detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12rpx;
+}
+
+.age, .sex, .origin, .realname, .distance, .skills, .totaltimes, .remarktimes, .score{
+  font-size: 9pt;
+}
+
+.tips{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 12rpx;
+  color: #4c4c4c;
+}

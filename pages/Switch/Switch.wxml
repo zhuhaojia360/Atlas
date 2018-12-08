@@ -1,0 +1,12 @@
+<view class='page'>
+  <view class='item' wx:if="{{userRole == 1}}">
+    <text class='txt'>您当前的身份为“尊贵的客户”</text>
+    <view class="btn-switch" style='margin-top:30rpx;background-color: #333333;' bindtap='toSkills'>切换为“尊敬的技师”</view>
+    <view class="btn-return" style='margin-top:30rpx;background-color: #333333;' bindtap='toThings'>返回</view>
+  </view>
+  <view class='item' wx:elif="{{userRole == 2}}">
+    <text class='txt'>您当前的身份为“尊敬的技师”</text>
+    <view class="btn-switch" style='margin-top:30rpx;background-color: #333333;' bindtap='toThings'>切换为“尊敬的客户”</view>
+    <view class="btn-return" style='margin-top:30rpx;background-color: #333333;' bindtap='toSkills'>返回</view>
+  </view>
+</view>

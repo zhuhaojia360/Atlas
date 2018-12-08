@@ -1,0 +1,38 @@
+/* pages/Register/Register.wxss */
+
+.page {
+  height: 100%;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  background: #fff;
+}
+
+.input {
+  margin: 30rpx;
+  display: flex;
+  align-items: center;
+  height: 118rpx;
+  padding: 0 36rpx;
+  background-color: #fff;
+  font-size: 36rpx;
+  color: #000;
+  border-bottom: 1rpx solid #b8b8b8;
+}
+
+.buttons{
+  margin: 0rpx 0rpx 0rpx 0rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.register {
+  padding-top: 30rpx;
+  text-align: center;
+  border-radius: 5px;
+  width: 280px;
+  height: 38px;
+  display: inline-block;
+  margin: 20rpx;
+  color: #fff;
+  font-size: 36rpx;
+  background-color: #333333;
+}
