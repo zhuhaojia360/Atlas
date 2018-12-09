@@ -1,4 +1,9 @@
 <view class='page'>
+  <view class='address'>
+    <text class='addr-txt'>地址</text>
+    <view class='addr-value'>梅溪湖国际新城·金茂府一期·8栋888</view>
+    <image class='addr-link' src='../../images/17.png'></image>
+  </view>
 
   <!--  选择区域  -->
   <!--view class="temp temp2 {{serviceOpen?'slidown':'slidup'}} {{serviceShow? 'disappear':''}}">
@@ -17,12 +22,6 @@
 
   <!-- 背景变灰 -->
   <!--view class="fullbg {{isfull?'fullopacity':''}}" bindtap='hidebg'></view-->
-
-  <view class='address'>
-    <text class='addr-txt'>位置</text>
-    <view class='addr-value'>梅溪湖国际新城·金茂府一期·8栋888</view>
-    <image class='addr-link' src='../../images/17.png'></image>
-  </view>
   
   <map class='map' id="map4select" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" scale="14" bindregionchange="regionchange" controls="{{controls}}">
   </map>

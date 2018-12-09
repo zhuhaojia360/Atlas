@@ -7,8 +7,50 @@
                  'Droid Sans Fallback',
                  'Microsoft Yahei',
                  sans-serif;
-  height: 100%;
   background: #fff;
+}
+
+
+.address{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 10rpx;
+}
+
+.addr-txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 10pt;
+  padding: 0rpx 16rpx;
+}
+
+.addr-value{
+  height: 60rpx;
+  padding: 0rpx 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10pt;
+}
+
+.addr-link{
+  width: 60rpx;
+  height: 60rpx;
+  padding: 10rpx 16rpx;
+}
+
+.input-tag{
+  font-size: 10pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
 }
 
 .block {
@@ -22,14 +64,13 @@
   background: linear-gradient(to right, #b8b8b8, #4c4c4c);
 }
 
-.input {
-  margin: 30rpx;
+.input{
+  width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  height: 80rpx;
-  padding: 0 36rpx;
   background-color: #fff;
-  font-size: 36rpx;
+  font-size: 8pt;
   color: #000;
   border-bottom: 1rpx solid #b8b8b8;
 }
@@ -98,18 +139,19 @@
 }
 
 .othersCheck {
+  width: 80%;
   text-align: center;
   display: inline-block;
   margin: 0 auto;
-  padding-bottom: 30rpx;
+  padding-bottom: 5rpx;
 }
 
 .othersItem {
   margin: 8rpx;
   background-color: #efefef;
   float: left;
-  font-size: 30rpx;
-  border-radius: 40rpx;
+  font-size: 10pt;
+  border-radius: 10%;
   color: #c6c4c4;
 }
 

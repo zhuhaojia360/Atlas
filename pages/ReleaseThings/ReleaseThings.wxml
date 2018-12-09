@@ -1,27 +1,39 @@
 <view class='page'>
+
+  <view class='input'>
+    <view class='input-tag'>服务类型</view>
+    <view class='input-value'>
+      <picker bindchange="serviceChange" value="{{index}}" range="{{serviceArray}}">
+        <view>
+          {{serviceArray[index]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  
+  <view class='input'>
+    <view class='input-tag'>上门时间</view>
+    <view class='input-datetime'>
+      <picker bindchange="dateChange" name='date' mode='date' value="{{date}}" start='{{begindate}}' end='{{enddate}}'>
+        <view class="picker-datetime">
+          <text class="grey">{{date}}</text>
+        </view>
+      </picker>
+      <picker bindchange="timeChange" mode='time' name='time' value="{{time}}" start='7:00' end='17:00'>
+        <view class="picker-datetime">
+          <text class="grey">{{time}}</text>
+        </view>
+      </picker>
+    </view>
+  </view>
+
   <view class='address'>
-    <text class='addr-txt'>位置</text>
+    <text class='addr-txt'>选择地址</text>
     <view class='addr-value'>梅溪湖国际新城·金茂府一期·8栋888</view>
     <image class='addr-link' src='../../images/17.png'></image>
   </view>
 
-    <view class='input'>
-      <view class='input-tag'>上门时间</view>
-      <view class='input-datetime'>
-        <picker bindchange="dateChange" name='date' mode='date' value="{{date}}" start='{{begindate}}' end='{{enddate}}'>
-          <view class="picker-datetime">
-            <text class="grey">{{date}}</text>
-          </view>
-        </picker>
-        <picker bindchange="timeChange" mode='time' name='time' value="{{time}}" start='7:00' end='17:00'>
-          <view class="picker-datetime">
-            <text class="grey">{{time}}</text>
-          </view>
-        </picker>
-      </view>
-    </view>
-
-    <!--view class='input'>
+  <!--view class='input'>
       <view class='input-tag'>省/市/区</view>
       <view class='input-value'>
         <picker bindchange="regionChange" mode='region' name='region' value="{{region}}" custom-item='{{customItem}}'>
@@ -59,44 +71,32 @@
       <image class="rightArrow" wx:elif="{{inputTelephone==false}}" src="../../releaseIcon/inputError.png"></image>
     </view-->
 
-    <view class='input'>
-      <view class='input-tag'>服务类型</view>
-      <view class='input-value'>
-        <picker bindchange="serviceChange" name="service" value="{{serviceArray}}" range="{{serviceArray}}">
-          <view class="picker">
-            <text class="grey">{{service}}</text>
-          </view>
-        </picker>
+  <view class='input'>
+    <view class='input-tag'>房屋面积</view>
+    <view class='input-value'>
+      <input type="number" bindblur="inputTelephoneRight" placeholder='{{tipsArea}}' name="area" placeholder-style="color:#B8B8B8" />
+    </view>
+    <image class="rightArrow" wx:if="{{inputTelephone==true}}" src="../../releaseIcon/inputRight.png"></image>
+    <image class="rightArrow" wx:elif="{{inputTelephone==false}}" src="../../releaseIcon/inputError.png"></image>
+    <!--view class='input-unit'>平方米</view-->
+  </view>
+
+
+  <view class='input-detail'>
+    <view class='input-tag'>详细要求</view>
+    <view class='input-value'>
+      <view class="othersItem" wx:for="{{traitList}}" wx:key='' data-index="{{index}}" bindtap="chooseThingsTrait" style="{{item.choose=='true'?'background-color:#4C4C4C;border: 1rpx solid #4C4C4C;color:#fff':' background-color: #fff;  border: 1rpx solid #c6c4c4;' }}">
+        <view style="padding:15rpx;">{{item.name}}</view>
       </view>
     </view>
+  </view>
 
-
-    <view class='input'>
-      <view class='input-tag'>房屋面积</view>
-      <view class='input-value'>
-        <input type="number" bindblur="inputTelephoneRight" placeholder='{{tipsArea}}' name="area" placeholder-style="color:#B8B8B8" />
-      </view>
-      <image class="rightArrow" wx:if="{{inputTelephone==true}}" src="../../releaseIcon/inputRight.png"></image>
-      <image class="rightArrow" wx:elif="{{inputTelephone==false}}" src="../../releaseIcon/inputError.png"></image>
-      <!--view class='input-unit'>平方米</view-->
+  <view class='input-remark'>
+    <view class='input-tag'>备注说明</view>
+    <view class='input-value'>
+      <input bindblur="inputRemarkRight" maxlength='20' placeholder='{{tipsRemark}}' name="remark" placeholder-style="color:#B8B8B8" />
     </view>
+  </view>
 
-
-    <view class='input-detail'>
-      <view class='input-tag'>详细要求</view>
-      <view class='input-value'>
-        <view class="othersItem" wx:for="{{traitList}}" wx:key='' data-index="{{index}}" bindtap="chooseThingsTrait" style="{{item.choose=='true'?'background-color:#4C4C4C;border: 1rpx solid #4C4C4C;color:#fff':' background-color: #fff;  border: 1rpx solid #c6c4c4;' }}">
-          <view style="padding:15rpx;">{{item.name}}</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='input-remark'>
-      <view class='input-tag'>备注说明</view>
-      <view class='input-value'>
-        <input bindblur="inputRemarkRight" maxlength='20' placeholder='{{tipsRemark}}' name="remark" placeholder-style="color:#B8B8B8" />
-      </view>
-    </view>
-
-    <button class="submitButton" formType="submit" style='margin-top:30rpx;'>立即发布</button>
+  <button class="submitButton" formType="submit" style='margin-top:30rpx;'>立即发布</button>
 </view>

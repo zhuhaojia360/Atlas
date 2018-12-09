@@ -1,36 +1,88 @@
-<view class='page'>
-  <view class='nav'>
-    <view class="nav-son {{shownavindex == 1 ? 'active' : ''}}" bindtap='' data-nav='1'>
-      <view class='condition'>{{location}}</view>
-      <image class='icon' src='../../images/down.png'></image>
-    </view>
-    <view class="nav-son {{shownavindex == 2 ? 'active' : ''}}" bindtap='' data-nav='2'>
-      <view class='condition'>{{sort}}</view>
-      <image class='icon' src='../../images/down.png'></image>
-    </view>
-    <view class="nav-son {{shownavindex == 3 ? 'active' : ''}}" bindtap='' data-nav='3'>
-      <view class='condition'>{{filter}}</view>
-      <image class='icon' src='../../images/down.png'></image>
-    </view>
+<!--view class='nav'>
+  <view class="nav-son {{shownavindex == 1 ? 'active' : ''}}" bindtap='' data-nav='1'>
+    <view class='condition'>{{location}}</view>
+    <image class='icon' src='../../images/down.png'></image>
   </view>
+  <view class="nav-son {{shownavindex == 2 ? 'active' : ''}}" bindtap='' data-nav='2'>
+    <view class='condition'>{{sort}}</view>
+    <image class='icon' src='../../images/down.png'></image>
+  </view>
+  <view class="nav-son {{shownavindex == 3 ? 'active' : ''}}" bindtap='' data-nav='3'>
+    <view class='condition'>{{filter}}</view>
+    <image class='icon' src='../../images/down.png'></image>
+  </view>
+</view-->
 
-  <!--  选择区域  -->
-  <!--view class="temp temp2 {{serviceOpen?'slidown':'slidup'}} {{serviceShow? 'disappear':''}}">
+<!--  选择区域  -->
+<!--view class="temp temp2 {{serviceOpen?'slidown':'slidup'}} {{serviceShow? 'disappear':''}}">
     <view data-service='{{item}}' hover-class='navigator-hover' wx:for="{{content}}" wx:key="{{item.id}}" bindtap='selectService' style='padding-left:10px'>{{item}}</view>
   </view-->
 
-  <!--  排序方法  -->
-  <!--view class="temp temp2 {{sortOpen?'slidown':'slidup'}} {{sortShow? 'disappear':''}}">
+<!--  排序方法  -->
+<!--view class="temp temp2 {{sortOpen?'slidown':'slidup'}} {{sortShow? 'disappear':''}}">
     <view data-service='{{item}}' hover-class='navigator-hover' wx:for="{{content}}" wx:key="{{item.id}}" bindtap='selectService' style='padding-left:10px'>{{item}}</view>
   </view-->
 
-  <!-- 筛选条件 -->
-  <!--view class="temp temp2 {{filterOpen?'slidown':'slidup'}} {{filterShow? 'disappear':''}}">
+<!-- 筛选条件 -->
+<!--view class="temp temp2 {{filterOpen?'slidown':'slidup'}} {{filterShow? 'disappear':''}}">
     <view data-filter='{{item}}' hover-class='navigator-hover' wx:for="{{content}}" wx:key="{{item.id}}" bindtap='selectFilter' style='padding-left:10px'>{{item}}</view>
   </view-->
 
-  <!-- 背景变灰 -->
-  <!--view class="fullbg {{isfull?'fullopacity':''}}" bindtap='hidebg'></view-->
+<!-- 背景变灰 -->
+<!--view class="fullbg {{isfull?'fullopacity':''}}" bindtap='hidebg'></view-->
+
+<view class='page'>
+
+  <view class='swiper'>
+    <swiper indicator-dots='{{indicatorDots}}' vertical='{{vertical}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+      <block wx:for-items='{{banner_url}}' wx:key='item.id'>
+        <swiper-item>
+          <block wx:if='{{item}}'>
+            <image src='{{item}}' mode='aspectFill'></image>
+          </block>
+          <block wx:else>
+            <image src='https://lg-aexije2w-1256961708.cos.ap-shanghai.myqcloud.com/banner_01.png' mode='aspectFill'></image>
+          </block>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='booking'>
+    <view class='suspend'>
+      <view class='input'>
+        <!--image class='input-flag' src='../../images/type.png'></image-->
+        <view class='input-tag'>服务类型</view>
+        <view class='input-value'>
+          <picker bindchange="serviceChange" value="{{index}}" range="{{serviceArray}}">
+            <view>
+              {{serviceArray[index]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view class='input'>
+        <!--image class='input-flag' src='../../images/datetime.png'></image-->
+        <view class='input-tag'>上门时间</view>
+        <view class='input-datetime'>
+          <picker bindchange="dateChange" name='date' mode='date' value="{{date}}" start='{{begindate}}' end='{{enddate}}'>
+            <view class="picker-datetime">
+              <text class="grey">{{date}}</text>
+            </view>
+          </picker>
+          <picker bindchange="timeChange" mode='time' name='time' value="{{time}}" start='7:00' end='17:00'>
+            <view class="picker-datetime">
+              <text class="grey">{{time}}</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <!--button class="submitButton" formType="submit" style='margin-top:30rpx;'>立即预约</button-->
+      <button class='submitButton' bindtap='bookingServ' data-date='{{date}}' data-time='{{time}}' data-index='{{index}}'>马上预约</button>
+    </view>
+  </view>
 
   <scroll-view>
     <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
@@ -91,123 +143,9 @@
         </view>
       </view>
     </block>
-
-    <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
-      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
-        <view class='item-left'>
-          <image class='avatar' src='../../images/logo.png'></image>
-          <text class='nickname'>陈尔尔</text>
-        </view>
-        <view class='item-right'>
-          <view class='detail'>
-            <text class='age'>年龄：45岁</text>
-            <text class='sex'>性别：女</text>
-            <text class='origin'>籍贯：湖南宁乡</text>
-          </view>
-          <view class='detail'>
-            <text class='realname'>实名：430105****1234</text>
-            <text class='distance'>距离：3KM</text>
-          </view>
-          <view class='detail'>
-            <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
-          </view>
-          <view class='detail'>
-            <text class='totaltimes'>服务: 288次</text>
-            <text class='remarktimes'>评价: 230次</text>
-            <text class='score'>★★★★☆</text>
-          </view>
-        </view>
-      </view>
-    </block>
-
-
-    <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
-      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
-        <view class='item-left'>
-          <image class='avatar' src='../../images/logo.png'></image>
-          <text class='nickname'>陈尔尔</text>
-        </view>
-        <view class='item-right'>
-          <view class='detail'>
-            <text class='age'>年龄：45岁</text>
-            <text class='sex'>性别：女</text>
-            <text class='origin'>籍贯：湖南宁乡</text>
-          </view>
-          <view class='detail'>
-            <text class='realname'>实名：430105****1234</text>
-            <text class='distance'>距离：3KM</text>
-          </view>
-          <view class='detail'>
-            <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
-          </view>
-          <view class='detail'>
-            <text class='totaltimes'>服务: 288次</text>
-            <text class='remarktimes'>评价: 230次</text>
-            <text class='score'>★★★★☆</text>
-          </view>
-        </view>
-      </view>
-    </block>
-
-
-    <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
-      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
-        <view class='item-left'>
-          <image class='avatar' src='../../images/logo.png'></image>
-          <text class='nickname'>陈尔尔</text>
-        </view>
-        <view class='item-right'>
-          <view class='detail'>
-            <text class='age'>年龄：45岁</text>
-            <text class='sex'>性别：女</text>
-            <text class='origin'>籍贯：湖南宁乡</text>
-          </view>
-          <view class='detail'>
-            <text class='realname'>实名：430105****1234</text>
-            <text class='distance'>距离：3KM</text>
-          </view>
-          <view class='detail'>
-            <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
-          </view>
-          <view class='detail'>
-            <text class='totaltimes'>服务: 288次</text>
-            <text class='remarktimes'>评价: 230次</text>
-            <text class='score'>★★★★☆</text>
-          </view>
-        </view>
-      </view>
-    </block>
-
-
-    <block wx:for="{{items}}" wx:key="i" wx:if="{{items}}">
-      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
-        <view class='item-left'>
-          <image class='avatar' src='../../images/logo.png'></image>
-          <text class='nickname'>陈尔尔</text>
-        </view>
-        <view class='item-right'>
-          <view class='detail'>
-            <text class='age'>年龄：45岁</text>
-            <text class='sex'>性别：女</text>
-            <text class='origin'>籍贯：湖南宁乡</text>
-          </view>
-          <view class='detail'>
-            <text class='realname'>实名：430105****1234</text>
-            <text class='distance'>距离：3KM</text>
-          </view>
-          <view class='detail'>
-            <text class='skills'>擅长：日常保洁 新房开荒 擦玻璃</text>
-          </view>
-          <view class='detail'>
-            <text class='totaltimes'>服务: 288次</text>
-            <text class='remarktimes'>评价: 230次</text>
-            <text class='score'>★★★★☆</text>
-          </view>
-        </view>
-      </view>
-    </block>
     <block wx:if="{{!items}}">
       <view class='tips'>{{tips}}</view>
     </block>
+
   </scroll-view>
 </view>

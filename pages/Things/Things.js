@@ -1,5 +1,7 @@
 // pages/Things/Things.js
 
+var util = require('../../utils/util.js');
+
 //获取应用实例
 const app = getApp();
 
@@ -9,6 +11,18 @@ Page({
    * 页面的初始数据
    */
   data: {
+    objectId: '', //当前活儿ID
+    items: [],
+    serviceArray: ['日常保洁', '新房开荒', '高级保姆', '金牌月嫂', '管道疏通', '家电清洗'],
+    serviceEnglish: ['CLEANUP', 'SWEEPUP', 'NANNY', 'BABYSITTER', 'DREDGE', 'APPLIANCE'],
+    index: 0,
+    service: '日常保洁',
+
+    begindate: '2018-09-09',
+    enddate: '2018-10-09',
+    date: '2018-09-09',
+    time: '12:00',
+
     shownavindex: 1,
     location: '长沙',
     sort: '推荐',
@@ -19,10 +33,16 @@ Page({
     filterOpen: false,
     filterShow: false,
 
-    content:'',
-    service:[],
+    //banner初始化
+    //banner_url: fileData.getBannerData(),
+    //banner_url: ['../../images/banner/banner_01.png', '../../images/banner/banner_02.png', '../../images/banner/banner_03.png', '../../images/banner/banner_04.png'],
+    banner_url: ['https://lg-aexije2w-1256961708.cos.ap-shanghai.myqcloud.com/banner_01.png', 'https://lg-aexije2w-1256961708.cos.ap-shanghai.myqcloud.com/banner_02.png', 'https://lg-aexije2w-1256961708.cos.ap-shanghai.myqcloud.com/banner_03.png','https://lg-aexije2w-1256961708.cos.ap-shanghai.myqcloud.com/banner_04.png'],
+    indicatorDots: true,
+    vertical: false,
+    autoplay: true,
+    interval: 3000,
+    duration: 1000,
 
-    items: [],
     count: 0,
     hasMore:true,
     isHideLoadMore: true,
@@ -206,7 +226,51 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    //获取系统当前时间年月日
+    var date = new Date();
+    var begindate = util.formatTime2(date);
+    var enddate = util.formatTime3(date);
+    //获取一年后的时间
+    //var endtime = util.formatTime3(date);
+    this.setData({
+      date: begindate,
+      begindate: begindate,
+      enddate: enddate
+    });
+    console.log('date:' + date + ' begindate:' + begindate + ' enddate:' + enddate)
+  },
 
+  serviceChange: function (e) {
+    var that = this;
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    that.setData({
+      index: e.detail.value
+      //service: that.data.serviceArray[e.detail.value]
+    })
+  },
+
+  dateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
+
+  timeChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      time: e.detail.value
+    })
+  },
+
+  bookingServ: function (e) {
+    var date = e.currentTarget.dataset.date;
+    var time = e.currentTarget.dataset.time;
+    //var region = e.currentTarget.dataset.region;
+    var index = e.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: '../ReleaseThings/ReleaseThings?date=' + date + '&time=' + time + '&index=' + index
+    })
   },
 
   /**

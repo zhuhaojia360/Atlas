@@ -24,7 +24,7 @@
     </view-->
 
   <view class='manage'>
-    <view bindtap='onDetail' class='item'>
+    <view bindtap='onReleaseSkills' class='item'>
       <image class='img' src='../../images/icon/creative.png'></image>
       <text class='txt'>发布本事</text>
       <image class='arrow' src='../../images/icon/right.png'></image>

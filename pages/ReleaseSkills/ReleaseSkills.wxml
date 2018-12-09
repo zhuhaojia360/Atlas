@@ -1,9 +1,32 @@
 <!--pages/ReleaseSkills/ReleaseSkills.wxml-->
 <view class='page'>
-  <form bindsubmit='releaseSuccess' report-submit='true'>
-    <!--view class='block'>联系方式</view-->
+
+  <view class='address'>
+    <text class='addr-txt'>位置</text>
+    <view class='addr-value'>梅溪湖国际新城·金茂府一期·8栋888</view>
+    <image class='addr-link' src='../../images/17.png'></image>
+  </view>
+
+  <view class='input'>
+    <view class='input-tag'>我有本事</view>
+    <view class="othersCheck" style="padding-top:5rpx;padding-bottom:5rpx;">
+      <view class="othersItem" wx:for="{{traitList}}" wx:key='' data-index="{{index}}" bindtap="chooseSkillsTrait" style="{{item.choose=='true'?'background-color:#4C4C4C;border: 1rpx solid #4C4C4C;color:#fff':' background-color: #fff;  border: 1rpx solid #c6c4c4;' }}">
+        <view style="padding:5rpx;">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='input'>
+    <view class='input-tag'>我更专业</view>
+    <view class="othersCheck" style="padding-top:5rpx;padding-bottom:5rpx;">
+      <view class="othersItem" wx:for="{{toolsList}}" wx:key='' data-index="{{index}}" bindtap="chooseTools" style="{{item.choose=='true'?'background-color:#4C4C4C;border: 1rpx solid #4C4C4C;color:#fff':' background-color: #fff;  border: 1rpx solid #c6c4c4;' }}">
+        <view style="padding:5rpx;">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!--form bindsubmit='releaseSuccess' report-submit='true'>
     <view class='input'>
-      <!--image class='releaseIcon' src='../../releaseIcon/name.png'></image-->
       <view class='inputColumn'>
         <input placeholder='{{tipsName}}' bindblur='inputNameRight' name='name' placeholder-style='color:#B8B8B8'></input>
       </view>
@@ -17,7 +40,7 @@
       </view>
       <image class="rightArrow" wx:if="{{inputTelephone==true}}" src="../../releaseIcon/inputRight.png"></image>
       <image class="rightArrow" wx:elif="{{inputTelephone==false}}" src="../../releaseIcon/inputError.png"></image>
-    </view>
+    </view-->
 
     <!--view class='input'>
       <view class="inputColumn">
@@ -30,7 +53,7 @@
     </view-->
 
     <!--view class='block'>所在区域</view-->
-    <view class='input'>
+    <!--view class='input'>
       <view class="inputColumn">
         <picker bindchange="regionChange" mode='region' name='region' value="{{region}}" custom-item='{{customItem}}'>
           <view class="picker">
@@ -68,8 +91,7 @@
       </view>
     </view>
 
-    <!--text name='price'>{{price}}</text-->
-
-    <button class="submitButton" formType="submit" style='margin-top:30rpx;'>立即发布</button>
-  </form>
+    
+  </form-->
+  <button class="submitButton" formType="submit" style='margin-top:30rpx;'>立即发布</button>
 </view>

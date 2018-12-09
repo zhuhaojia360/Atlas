@@ -6,8 +6,109 @@
   background:  #efefef;
 }
 
+/* 轮播图 */
+.swiper{
+    width:100%;
+    margin:0rpx;
+}
+.swiper image{
+    display: inline;
+}
+
+.booking{
+  width: 100%;
+  height: 300rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.suspend{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 680rpx;
+  height: 300rpx;
+  background-color: #fff; 
+  z-index: 99;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10rpx;
+  margin-top: -80rpx;
+  border: 2px solid #fff;
+  box-shadow: 0rpx 0rpx 0rpx rgba(0, 0, 0, 0.2);
+}
+
+.submitButton {
+  width: 628rpx;
+  height: 90rpx;
+  background-color: #333333;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 0rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input{
+  margin-top: 5rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+  width: 600rpx;
+  background-color: #fff;
+  font-size: 12pt;
+  color: #000;
+  padding: 0rpx 16rpx;
+  border-bottom: 1rpx solid #b8b8b8;
+}
+
+.input-flag{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.input-tag{
+  font-size: 11pt;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180rpx;
+}
+
+.input-value{
+  width: 100%;
+  font-size: 12pt;
+  font-weight: normal;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-datetime{
+  width: 100%;
+  font-size: 12pt;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.picker-datetime{
+  padding: 0rpx 50rpx;
+}
+
 .nav{
-  position: relative;
+  position: fixed;
+  top: 0rpx;
   z-index: 98;
   height: 78rpx;
   width: 100%;
@@ -45,7 +146,6 @@
   height: 30rpx;
   margin: 0rpx 15rpx;
 }
-
 
 .temp{
   position: absolute;

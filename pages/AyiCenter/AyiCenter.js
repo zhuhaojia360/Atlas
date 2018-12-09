@@ -38,7 +38,14 @@ Page({
     }
   },
 
-  /**查看用户详情 */
+  /**发布技能 */
+  onReleaseSkills: function () {
+    wx.navigateTo({
+      url: '../ReleaseSkills/ReleaseSkills'
+    })
+  },
+
+  /**发布技能 */
   onDetail: function () {
     wx.navigateTo({
       url: '../MyDetail/MyDetail'
