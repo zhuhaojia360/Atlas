@@ -140,7 +140,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60rpx;
+  width: 180rpx;
   height: 60rpx;
   font-size: 10pt;
   padding: 0rpx 16rpx;
